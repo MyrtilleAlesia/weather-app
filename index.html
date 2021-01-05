@@ -11,20 +11,22 @@
 </head>
 <body>
     <div class="container">
+        <div class="weather-app-wrapper">
         <div class="weather-app">
+            <div class="overview">
         <h1>
             Weather | Météo
         </h1> 
         <div class="row">
             <div class="col-4">
-                <h2>
+                <h1>
                     <span id="city">City</span> 
-                </h2>
+                </h1>
         <ul>
             <li id="date">
                 Friday 05:00
             </li>
-            <li>
+            <li id="clear">
                 Clear
             </li>
         </ul>
@@ -37,16 +39,21 @@
             </form>
         </div>
         </div>
+        </div>
         <div class="row">
             <div class="col-6" id="weather">
-                <img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" alt="Clear">
+                <div class="clearfix weather-temperature">
+                <img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" alt="Clear" class="float-left">
                 <span class="temperature">
-                    19
+                    <strong>19</strong> 
                 </span>
                 <span class="units">
+                    <small>
                     <a href="#" id="celsius">°C |</a>
                     <a href="#" id="fahrenheit">°F</a>
+                    </small>
                 </span>
+                </div>
             </div>
             <div class="col-6">
                 <ul>
@@ -63,6 +70,7 @@
         <small>
             <a href="https://github.com/MyrtilleAlesia/weather-app" target="_blank">Open-source, by Myrtille Alésia Murangamirwa</a>
         </small>
+        </div>
         </div>
     </div>
     <script src="src/app.js"></script>
