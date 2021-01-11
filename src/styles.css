@@ -44,7 +44,7 @@ ul:hover {
 
 #city,
 #date,
-#clear {
+#description {
   color: rgb(0, 0, 0);
   text-align: left;
 }
