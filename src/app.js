@@ -26,17 +26,16 @@ dateElement.innerHTML = formatDate(currentTime);
 
 //2) Displaying the temperature
 function showTemperature(response) {
-  //document.querySelector("#city").innerHTML = response.data.name;
-  //let temperature = response.data.main.temp;
-  //let tempElement = document.querySelector("temperature");
-  //tempElement.innerHtml = response.data.main.temp;
+  
   document.querySelector(".temperature").innerHTML = response.data.main.temp;
   let humidityElement = document.querySelector("#humidity");
   let descriptionElement = document.querySelector("#description");
   let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = response.data.wind.speed;
+  iconElement.setAttribute("src",'http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png');
 }
 
 //3) Second Part | searching for the city
