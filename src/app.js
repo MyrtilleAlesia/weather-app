@@ -9,7 +9,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
   let days = [
-    "Sunday",
+    "Sunday", 
     "Monday",
     "Tuesday",
     "Wednesday",
@@ -31,6 +31,10 @@ function showTemperature(response) {
   //let tempElement = document.querySelector("temperature");
   //tempElement.innerHtml = response.data.main.temp;
   document.querySelector(".temperature").innerHTML = response.data.main.temp;
+  let humidityElement = document.querySelector("#humidity");
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
 }
 
 //3) Second Part | searching for the city
