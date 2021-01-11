@@ -33,8 +33,10 @@ function showTemperature(response) {
   document.querySelector(".temperature").innerHTML = response.data.main.temp;
   let humidityElement = document.querySelector("#humidity");
   let descriptionElement = document.querySelector("#description");
+  let windElement = document.querySelector("#wind");
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = response.data.wind.speed;
 }
 
 //3) Second Part | searching for the city
